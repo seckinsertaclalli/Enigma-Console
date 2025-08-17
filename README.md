@@ -18,11 +18,11 @@ Designed as a **special product** for digital control of a furniture console.
 
 ## 📂 Project Structure
 ```
-├── enigma-gui.ui          # Qt Designer file for GUI
-├── main.py                # Python GUI (RPi Zero 2 W)
-├── parameters.json        # Runtime configuration
-├── main_pico.py           # Pico firmware (MicroPython)
-├── sifirlama_sifresi.py   # Reset password generator tool
+├── pi/enigma-gui.ui          # Qt Designer file for GUI
+├── pi/main.py                # Python GUI (RPi Zero 2 W)
+├── pi/parameters.json        # Runtime configuration
+├── pico/main_pico.py           # Pico firmware (MicroPython)
+├── pi/sifirlama_sifresi.py   # Reset password generator tool
 ```
 
 ---
