@@ -1,0 +1,7380 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>480</width>
+    <height>800</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>480</width>
+      <height>800</height>
+     </rect>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="first_page">
+     <widget class="QLabel" name="background">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>150</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="create_pass_label">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>310</y>
+        <width>260</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="inputMethodHints">
+       <set>Qt::ImhDigitsOnly|Qt::ImhHiddenText|Qt::ImhNoAutoUppercase|Qt::ImhNoPredictiveText</set>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Create Password</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ff_logo">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>620</y>
+        <width>180</width>
+        <height>180</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(Transperent-Logo.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="without_pass_button">
+      <property name="geometry">
+       <rect>
+        <x>110</x>
+        <y>410</y>
+        <width>260</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+       QPushButton{background-color:rgba(0, 0, 0, 0);border: 2px solid  rgba(237, 237, 237, 237);border-radius: 5px;padding: 5px;color:rgba(237, 237, 237, 237);background-color:  rgba(96, 96, 96, 96);}QPushButton:pressed {background-color: rgba(196, 196, 196, 196);}
+        </string>
+      </property>
+      <property name="text">
+       <string>Continue without Password</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="create_password_page1">
+     <widget class="QLabel" name="background_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color:rgba(255,255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num4_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num7_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num5_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num0_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num6_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ent_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>ENT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num1_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num8_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>DEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num3_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num9_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num2_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="create_password_2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>130</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Create Password</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control2_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="again_password_page">
+     <widget class="QLabel" name="background_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="confirm_password_button">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>130</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Confirm Password</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num2_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num1_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num3_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: #00FF00; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ent_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>ENT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num8_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num6_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control2_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num7_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>DEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num4_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num5_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num9_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color:rgba(255,255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num0_pushbutton_2">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="password_done_page">
+     <widget class="QLabel" name="background_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_4">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>150</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="finish_text">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>290</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>WELL DONE!</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="security_text">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>340</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>Here is your security code:</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="securit_code_label">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>410</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="mouseTracking">
+       <bool>false</bool>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Security Code Here</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="info_text">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>490</y>
+        <width>311</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>12</pointsize>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>Don't forget to save and keep this code aside. When you forget your password, &lt;strong&gt;you can reset your password using this code.&lt;/strong&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="continue_button">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>630</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {border-radius: 40px;}QPushButton:pressed {background-color: rgba(196, 196, 196, 196);}
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>continue-icon.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="main_page">
+     <widget class="QLabel" name="background_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_5">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>150</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="open_button">
+      <property name="geometry">
+       <rect>
+        <x>99</x>
+        <y>270</y>
+        <width>281</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+border-radius: 5px;
+padding: 5px; 
+color:#383838;
+background-color:  #DCFFCC;
+}
+QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }
+
+    </string>
+      </property>
+      <property name="text">
+       <string>OPEN CONSOLE</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="close_button">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>410</y>
+        <width>281</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+border-radius: 5px;
+padding: 5px; 
+color:#383838;
+background-color:  #8E6C6C;
+}
+QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }
+
+    </string>
+      </property>
+      <property name="text">
+       <string>CLOSE CONSOLE</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ff_logo_2">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>620</y>
+        <width>180</width>
+        <height>180</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(Transperent-Logo.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="settings_pushbutton">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>580</y>
+        <width>160</width>
+        <height>40</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+       QPushButton{background-color:rgba(0, 0, 0, 0);border: 2px solid  rgba(237, 237, 237, 237);border-radius: 5px;padding: 5px;color:rgba(237, 237, 237, 237);padding-bottom:9px;background-color:  rgba(96, 96, 96, 96);} QPushButton:pressed {background-color: rgba(196, 196, 196, 196); }
+       </string>
+      </property>
+      <property name="text">
+       <string>Settings</string>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="password_open">
+     <widget class="QPushButton" name="num3_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num7_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="open_password_button">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>130</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Password</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ent_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>ENT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>DEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num6_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num0_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num2_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num9_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num1_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_15">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color:rgba(255,255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num8_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num4_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num5_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <zorder>background_14</zorder>
+     <zorder>num3_pushbutton_9</zorder>
+     <zorder>num7_pushbutton_9</zorder>
+     <zorder>open_password_button</zorder>
+     <zorder>ent_pushbutton_9</zorder>
+     <zorder>enigmatext_14</zorder>
+     <zorder>del_pushbutton_9</zorder>
+     <zorder>num6_pushbutton_9</zorder>
+     <zorder>num0_pushbutton_9</zorder>
+     <zorder>num2_pushbutton_9</zorder>
+     <zorder>num9_pushbutton_9</zorder>
+     <zorder>num1_pushbutton_9</zorder>
+     <zorder>consoletext_15</zorder>
+     <zorder>num8_pushbutton_9</zorder>
+     <zorder>num4_pushbutton_9</zorder>
+     <zorder>num5_pushbutton_9</zorder>
+    </widget>
+    <widget class="QWidget" name="settings_page">
+     <widget class="QLabel" name="background_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>150</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_6">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>200</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat ExtraBold</family>
+        <pointsize>15</pointsize>
+        <underline>true</underline>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>Settings</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="change_password_label">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>280</y>
+        <width>300</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Change Password</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="change_condition_lable">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>360</y>
+        <width>300</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Password ON</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="forgot_security_code_label">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>450</y>
+        <width>300</width>
+        <height>50</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Tahoma</family>
+        <pointsize>12</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="text">
+       <string>Reset Password with Security Code</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="ff_logo_3">
+      <property name="geometry">
+       <rect>
+        <x>150</x>
+        <y>620</y>
+        <width>180</width>
+        <height>180</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">border-image: url(Transperent-Logo.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="back_button">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>540</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton { border-radius: 40px;}
+    QPushButton:pressed {background-color: rgba(196, 196, 196, 196); }
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>back-icon.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label">
+      <property name="geometry">
+       <rect>
+        <x>5</x>
+        <y>780</y>
+        <width>150</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>315</x>
+        <y>780</y>
+        <width>160</width>
+        <height>15</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>10</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color: rgb(255, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="change_password_page">
+     <widget class="QPushButton" name="control2_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_8">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color:rgba(255,255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num3_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num9_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num0_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num1_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="create_password_4">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>130</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Current Password</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num2_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num6_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num8_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num7_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_7">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ent_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>ENT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num4_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num5_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_pushbutton_3">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>DEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <zorder>background_7</zorder>
+     <zorder>control2_pushbutton_3</zorder>
+     <zorder>consoletext_8</zorder>
+     <zorder>num3_pushbutton_3</zorder>
+     <zorder>enigmatext_7</zorder>
+     <zorder>num9_pushbutton_3</zorder>
+     <zorder>num0_pushbutton_3</zorder>
+     <zorder>num1_pushbutton_3</zorder>
+     <zorder>create_password_4</zorder>
+     <zorder>num2_pushbutton_3</zorder>
+     <zorder>num6_pushbutton_3</zorder>
+     <zorder>num8_pushbutton_3</zorder>
+     <zorder>num7_pushbutton_3</zorder>
+     <zorder>ent_pushbutton_3</zorder>
+     <zorder>num4_pushbutton_3</zorder>
+     <zorder>num5_pushbutton_3</zorder>
+     <zorder>control1_pushbutton_3</zorder>
+     <zorder>del_pushbutton_3</zorder>
+     <zorder>control1_pushbutton_4</zorder>
+    </widget>
+    <widget class="QWidget" name="change_pw_new_pw">
+     <widget class="QLabel" name="enigmatext_8">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="create_password_5">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>130</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>New Password</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num5_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>DEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control2_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: #00FF00; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color:rgba(255,255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num3_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num7_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num4_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num9_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ent_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>ENT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num2_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num6_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num8_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num1_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num0_pushbutton_4">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_8">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>background_8</zorder>
+     <zorder>enigmatext_8</zorder>
+     <zorder>create_password_5</zorder>
+     <zorder>num5_pushbutton_4</zorder>
+     <zorder>del_pushbutton_4</zorder>
+     <zorder>control2_pushbutton_4</zorder>
+     <zorder>control1_pushbutton_5</zorder>
+     <zorder>control1_pushbutton_6</zorder>
+     <zorder>consoletext_9</zorder>
+     <zorder>num3_pushbutton_4</zorder>
+     <zorder>num7_pushbutton_4</zorder>
+     <zorder>num4_pushbutton_4</zorder>
+     <zorder>num9_pushbutton_4</zorder>
+     <zorder>ent_pushbutton_4</zorder>
+     <zorder>num2_pushbutton_4</zorder>
+     <zorder>num6_pushbutton_4</zorder>
+     <zorder>num8_pushbutton_4</zorder>
+     <zorder>num1_pushbutton_4</zorder>
+     <zorder>num0_pushbutton_4</zorder>
+    </widget>
+    <widget class="QWidget" name="new_pw_confirm_pw">
+     <widget class="QPushButton" name="num7_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_10">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color:rgba(255,255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num9_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num2_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: #00FF00; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>DEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num4_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num6_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num1_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num8_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num0_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num3_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: #00FF00; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num5_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ent_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>ENT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_9">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="create_password_6">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>130</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Confirm Password</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control2_pushbutton_5">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <zorder>background_9</zorder>
+     <zorder>num7_pushbutton_5</zorder>
+     <zorder>consoletext_10</zorder>
+     <zorder>enigmatext_9</zorder>
+     <zorder>num9_pushbutton_5</zorder>
+     <zorder>num2_pushbutton_5</zorder>
+     <zorder>control1_pushbutton_7</zorder>
+     <zorder>del_pushbutton_5</zorder>
+     <zorder>num4_pushbutton_5</zorder>
+     <zorder>num6_pushbutton_5</zorder>
+     <zorder>num1_pushbutton_5</zorder>
+     <zorder>num8_pushbutton_5</zorder>
+     <zorder>num0_pushbutton_5</zorder>
+     <zorder>num3_pushbutton_5</zorder>
+     <zorder>control1_pushbutton_8</zorder>
+     <zorder>num5_pushbutton_5</zorder>
+     <zorder>ent_pushbutton_5</zorder>
+     <zorder>create_password_6</zorder>
+     <zorder>control2_pushbutton_5</zorder>
+    </widget>
+    <widget class="QWidget" name="new_pw_done_page">
+     <widget class="QLabel" name="security_text_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>340</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>15</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>Here is your security code:</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="finish_text_2">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>250</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>WELL DONE!</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="continue_button_2">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="geometry">
+       <rect>
+        <x>200</x>
+        <y>630</y>
+        <width>80</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+        <horstretch>0</horstretch>
+        <verstretch>0</verstretch>
+       </sizepolicy>
+      </property>
+      <property name="font">
+       <font>
+        <kerning>false</kerning>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+ border-radius: 40px; 
+
+
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }
+</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="icon">
+       <iconset>
+        <activeon>continue-icon.png</activeon>
+       </iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>80</width>
+        <height>80</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_10">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>100</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_10">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLabel" name="info_text_2">
+      <property name="geometry">
+       <rect>
+        <x>90</x>
+        <y>490</y>
+        <width>311</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Medium</family>
+        <pointsize>12</pointsize>
+        <strikeout>false</strikeout>
+       </font>
+      </property>
+      <property name="layoutDirection">
+       <enum>Qt::LeftToRight</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>Don't forget to save and keep this code aside. When you forget your password, &lt;strong&gt;you can reset your password using this code.&lt;/strong&gt;</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="scaledContents">
+       <bool>false</bool>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="wordWrap">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="securit_code_label_2">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>410</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>16</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="readOnly">
+       <bool>true</bool>
+      </property>
+      <property name="placeholderText">
+       <string>Security Code Here</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_11">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>150</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="security_text_3">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>300</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat SemiBold</family>
+        <pointsize>12</pointsize>
+        <weight>50</weight>
+        <italic>true</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>The password successfully changed.</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <zorder>background_10</zorder>
+     <zorder>security_text_2</zorder>
+     <zorder>finish_text_2</zorder>
+     <zorder>continue_button_2</zorder>
+     <zorder>enigmatext_10</zorder>
+     <zorder>info_text_2</zorder>
+     <zorder>securit_code_label_2</zorder>
+     <zorder>consoletext_11</zorder>
+     <zorder>security_text_3</zorder>
+    </widget>
+    <widget class="QWidget" name="securitycode_change_pw">
+     <widget class="QLabel" name="enigmatext_11">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="create_password_7">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>130</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="focusPolicy">
+       <enum>Qt::NoFocus</enum>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Normal</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Security Code</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num5_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>DEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control2_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_9">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_10">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color:rgba(255,255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num3_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num7_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num4_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num9_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ent_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>ENT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num2_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num6_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num1_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num8_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num0_pushbutton_6">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_11">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>background_11</zorder>
+     <zorder>enigmatext_11</zorder>
+     <zorder>create_password_7</zorder>
+     <zorder>num5_pushbutton_6</zorder>
+     <zorder>del_pushbutton_6</zorder>
+     <zorder>control2_pushbutton_6</zorder>
+     <zorder>control1_pushbutton_9</zorder>
+     <zorder>control1_pushbutton_10</zorder>
+     <zorder>consoletext_12</zorder>
+     <zorder>num3_pushbutton_6</zorder>
+     <zorder>num7_pushbutton_6</zorder>
+     <zorder>num4_pushbutton_6</zorder>
+     <zorder>num9_pushbutton_6</zorder>
+     <zorder>ent_pushbutton_6</zorder>
+     <zorder>num2_pushbutton_6</zorder>
+     <zorder>num6_pushbutton_6</zorder>
+     <zorder>num1_pushbutton_6</zorder>
+     <zorder>num8_pushbutton_6</zorder>
+     <zorder>num0_pushbutton_6</zorder>
+    </widget>
+    <widget class="QWidget" name="securitycode_change_pw2">
+     <widget class="QPushButton" name="num7_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_13">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color:rgba(255,255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num9_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num2_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_11">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: #00FF00; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>DEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num4_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num6_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num1_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num8_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num0_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num3_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_12">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num5_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ent_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>ENT</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_12">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="create_password_8">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>130</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>New Password</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control2_pushbutton_7">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <zorder>background_12</zorder>
+     <zorder>num7_pushbutton_7</zorder>
+     <zorder>consoletext_13</zorder>
+     <zorder>enigmatext_12</zorder>
+     <zorder>num9_pushbutton_7</zorder>
+     <zorder>num2_pushbutton_7</zorder>
+     <zorder>control1_pushbutton_11</zorder>
+     <zorder>del_pushbutton_7</zorder>
+     <zorder>num4_pushbutton_7</zorder>
+     <zorder>num6_pushbutton_7</zorder>
+     <zorder>num1_pushbutton_7</zorder>
+     <zorder>num8_pushbutton_7</zorder>
+     <zorder>num0_pushbutton_7</zorder>
+     <zorder>num3_pushbutton_7</zorder>
+     <zorder>control1_pushbutton_12</zorder>
+     <zorder>num5_pushbutton_7</zorder>
+     <zorder>ent_pushbutton_7</zorder>
+     <zorder>create_password_8</zorder>
+     <zorder>control2_pushbutton_7</zorder>
+    </widget>
+    <widget class="QWidget" name="securitycode_change_pw3">
+     <widget class="QPushButton" name="control1_pushbutton_13">
+      <property name="geometry">
+       <rect>
+        <x>70</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: #00FF00; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control2_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>380</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: transparent; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="control1_pushbutton_14">
+      <property name="geometry">
+       <rect>
+        <x>20</x>
+        <y>50</y>
+        <width>30</width>
+        <height>30</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 15px; 
+        background-color: #00FF00; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(96, 96, 96, 96); 
+ }</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num9_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>9</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num8_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>8</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num0_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>0</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num4_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>4</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>false</bool>
+      </property>
+      <property name="flat">
+       <bool>true</bool>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num5_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>5</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num3_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>3</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="ent_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>ENT</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num7_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>490</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>7</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num6_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>320</x>
+        <y>360</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>6</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="del_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>620</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>DEL</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num2_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>190</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>2</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="consoletext_14">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>60</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Light</family>
+        <pointsize>31</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+color:rgba(255,255,255,255);</string>
+      </property>
+      <property name="text">
+       <string>CONSOLE</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::AutoText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="num1_pushbutton_8">
+      <property name="geometry">
+       <rect>
+        <x>60</x>
+        <y>230</y>
+        <width>100</width>
+        <height>100</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>23</pointsize>
+        <weight>75</weight>
+        <bold>true</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">
+QPushButton {
+        color: white; 
+        border: 2px solid white; 
+        border-radius: 50px; 
+        background-color: rgba(96, 96, 96, 96);; 
+        padding: 5px; 
+    }
+
+    QPushButton:pressed {
+        background-color: rgba(196, 196, 196, 196); 
+
+ }</string>
+      </property>
+      <property name="text">
+       <string>1</string>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>50</height>
+       </size>
+      </property>
+      <property name="autoDefault">
+       <bool>true</bool>
+      </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLineEdit" name="create_password_9">
+      <property name="geometry">
+       <rect>
+        <x>100</x>
+        <y>130</y>
+        <width>280</width>
+        <height>60</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>20</pointsize>
+       </font>
+      </property>
+      <property name="autoFillBackground">
+       <bool>false</bool>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color:rgba(0, 0, 0, 0);
+border:none;
+border-bottom:3px solid rgba(237, 237, 237, 237);
+color:rgba(237, 237, 237, 237);
+padding-bottom:7px;
+background-color: rgba(0, 0, 0, 0);</string>
+      </property>
+      <property name="frame">
+       <bool>true</bool>
+      </property>
+      <property name="echoMode">
+       <enum>QLineEdit::Password</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="placeholderText">
+       <string>Confirm Password</string>
+      </property>
+      <property name="clearButtonEnabled" stdset="0">
+       <bool>false</bool>
+      </property>
+     </widget>
+     <widget class="QLabel" name="enigmatext_13">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>10</y>
+        <width>480</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="font">
+       <font>
+        <family>Montserrat Black</family>
+        <pointsize>35</pointsize>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">color:rgba(255,255,255,255);
+</string>
+      </property>
+      <property name="text">
+       <string>ENIGMA</string>
+      </property>
+      <property name="textFormat">
+       <enum>Qt::PlainText</enum>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+     </widget>
+     <widget class="QLabel" name="background_13">
+      <property name="geometry">
+       <rect>
+        <x>0</x>
+        <y>0</y>
+        <width>480</width>
+        <height>800</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(bg-vertical.png);</string>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <zorder>background_13</zorder>
+     <zorder>control1_pushbutton_13</zorder>
+     <zorder>control2_pushbutton_8</zorder>
+     <zorder>control1_pushbutton_14</zorder>
+     <zorder>num9_pushbutton_8</zorder>
+     <zorder>num8_pushbutton_8</zorder>
+     <zorder>num0_pushbutton_8</zorder>
+     <zorder>num4_pushbutton_8</zorder>
+     <zorder>num5_pushbutton_8</zorder>
+     <zorder>num3_pushbutton_8</zorder>
+     <zorder>ent_pushbutton_8</zorder>
+     <zorder>num7_pushbutton_8</zorder>
+     <zorder>num6_pushbutton_8</zorder>
+     <zorder>del_pushbutton_8</zorder>
+     <zorder>num2_pushbutton_8</zorder>
+     <zorder>consoletext_14</zorder>
+     <zorder>num1_pushbutton_8</zorder>
+     <zorder>create_password_9</zorder>
+     <zorder>enigmatext_13</zorder>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources>
+  <include location="new-res.qrc"/>
+ </resources>
+ <connections/>
+</ui>
