@@ -81,6 +81,11 @@ python3 sifirlama_sifresi.py
 ---
 
 ## 🧑‍🤝‍🧑 Project Team
+|---------------------|-----------------------------------------------|
+| UI Designer         | [![kursattoz](https://github.com/kursattoz.png?size=40)](https://github.com/kursattoz) |
+| Project Coordinator | [![atilganmali](https://github.com/atilganmali.png?size=40)](https://github.com/atilganmali) |
+| Developer           | [![seckinsertaclalli](https://github.com/seckinsertaclalli.png?size=40)](https://github.com/seckinsertaclalli) |
+
 - **UI Designer**: [@kursattoz](https://github.com/kursattoz)  
 - **Project Coordinator**: [@atilganmali](https://github.com/atilganmali)  
 - **Software & Hardware Developer**: [@seckinsertaclalli](https://github.com/seckinsertaclalli)  
