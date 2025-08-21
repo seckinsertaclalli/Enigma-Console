@@ -78,7 +78,7 @@ python3 sifirlama_sifresi.py
 - Enter values from GUI settings screen corners  
 - Utility generates unique reset code for the device  
 
----
+----
 
 ## 🧑‍🤝‍🧑 Project Team
 - **UI Designer**: [@kursattoz](https://github.com/kursattoz)  
